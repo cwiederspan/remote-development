@@ -1,4 +1,4 @@
-# Try Out Development Containers: .NET Core
+# Try Out Development Containers: Java
 
 This is a sample project that lets you try out the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension in a few easy steps.
 
@@ -19,32 +19,26 @@ Follow these steps to open this sample in a container:
 
 ## Things to try
 
-One you have this sample opened in a container, you'll be able to work with it like you would locally.
+Once you have this sample opened in a container, you'll be able to work with it like you would locally. 
 
-> **Note:** This container runs as a non-root user with sudo access by default. Comment out `"runArgs": ["-u", "vscode"]` in `.devcontainer/devcontainer.json` if you'd prefer to run as root.
+> **Note:** This container runs as a non-root user with sudo access by default. Comment out `"-u", "vscode"` in `.devcontainer/devcontainer.json` if you'd prefer to run as root.
 
 Some things to try:
 
-1. **Restore Packages:** When notified by the C# extension to install packages, click Restore to trigger the process from inside the container!
-2. **Edit:**
-   - Open `Program.cs`
+1. **Edit:**
+   - Open `src/main/java/com/mycompany/app/App.java`.
    - Try adding some code and check out the language features.
-3. **Terminal:** Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> and type `dotnet --version` and other Linux commands from the terminal window.
-4. **Build, Run, and Debug:**
-   - Open `Program.cs`
-   - Add a breakpoint (e.g. on line 21).
+2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
+3. **Build, Run, and Debug:**
+   - Open `src/main/java/com/mycompany/app/App.java`.
+   - Add a breakpoint.
    - Press <kbd>F5</kbd> to launch the app in the container.
    - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-   - Continue, then open a local browser and go to `http://localhost:9000` and note you can connect to the server in the container.
-5. **Forward another port:**
-   - Stop debugging and remove the breakpoint.
-   - Open `Program.cs`
-   - Change the server port to 5000. (`.UseUrls("http://0.0.0.0:5000")`)
-   - Press <kbd>F5</kbd> to launch the app in the container.
-   - Press <kbd>F1</kbd> and run the **Remote-Containers: Forward Port from Container...** command.
-   - Select port 5000.
-   - Click "Open Browser" in the notification that appears to access the web app on this new port.
-
+4. **Run a Test:**
+   - Open `src/main/java/com/mycompany/app/AppTest.java`.
+   - Put a breakpoint in a test.
+   - Click the `Debug Test` in the Code Lens above the function and watch it hit the breakpoint.
+  
 ## Contributing
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a
