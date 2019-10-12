@@ -11,12 +11,12 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 
-namespace aspnetapp
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
+namespace aspnetapp {
+
+    public class Program {
+        
+        public static void Main(string[] args) {
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://0.0.0.0:9000")
@@ -27,6 +27,5 @@ namespace aspnetapp
 
             host.Run();
         }
-
     }
 }
