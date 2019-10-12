@@ -1,27 +1,46 @@
-# WslAngular
+# Angular Sample with WSL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+## Prerequisites
 
-## Development server
+For this demo, you will need to install a few tools in your WSL distribution.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+# Make sure your apt utilities are up to date
+sudo apt update
 
-## Code scaffolding
+# Download the latest 10.x LTS version of NodeJS
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Install NodeJS
+sudo apt-get install -y nodejs
 
-## Build
+# Install NPM (if necessary)
+sudo apt install npm
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Install the Angular CLI
+sudo npm install -g @angular/cli
+```
 
-## Running unit tests
+## Run the Demo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# From your WSL command line, navigate to the proper working directory (this one)
+cd wsl-angular
 
-## Running end-to-end tests
+# Now, open VS Code from the WSL command line
+code .
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Develop in VS Code
 
-## Further help
+In the bottom left corner of VS Code, you should see something like this indicating that you are using Remote Development for WSL.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![WSL Indicator](../assets/wsl-statusbar-indicator.png)
+
+## Run the App
+
+From the Terminal inside VS Code, you can now run the application.
+
+```bash
+ng serve
+```
